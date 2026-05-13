@@ -1,0 +1,62 @@
+{
+  "41": {
+    "inputs": {
+      "precision": "fp32",
+      "attn_backend": "auto"
+    },
+    "class_type": "MIALoadModel",
+    "_meta": {
+      "title": "MIA: Load Model"
+    }
+  },
+  "50": {
+    "inputs": {
+      "fbx_name": "",
+      "no_fingers": true,
+      "use_normal": true,
+      "sample_points": 32768,
+      "neck_resample_ratio": 0,
+      "neck_radius_ratio": 0.02,
+      "reset_to_rest": false,
+      "normalize_ground": true,
+      "add_root_bone": true,
+      "trimesh": [
+        "71",
+        0
+      ],
+      "model": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "MIAAutoRig",
+    "_meta": {
+      "title": "MIA: Auto Rig"
+    }
+  },
+  "71": {
+    "inputs": {
+      "source_folder": "input",
+      "file_path": "3d/01.fbx",
+      "obj_path": "",
+      "mesh_selector": "3d/01.fbx"
+    },
+    "class_type": "UniRigLoadMesh",
+    "_meta": {
+      "title": "UniRig: Load Mesh"
+    }
+  },
+  "72": {
+    "inputs": {
+      "file_path": [
+        "50",
+        0
+      ],
+      "Download": ""
+    },
+    "class_type": "NDBox_DownloadFile",
+    "_meta": {
+      "title": "NDBox Download File"
+    }
+  }
+}
